@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="global.css">
+    <title>Weather-App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="toggle-wrapper">
+                <label class="toggle-switch">
+                    <input type="checkbox" class="dark-mode-toggle">
+                    <div class="toggle-switch-background">
+                        <div class="toggle-switch-handle"></div>
+                    </div>
+                </label>
+                <span class="toggle-switch-label">Dark Mode</span>
+            </div>
+            <div class="search-box">
+                <div class="search-bar">
+                    <img src="public/images/search.png" alt="Search" />
+                    <input type="text" placeholder="Search for your preferred city..." />
+                </div>
+            </div>
+            <div class="location">
+                <img src="public/images/location.png" alt="Location" />
+                <span>Current Location</span>
+            </div>
+        </div>
+
+        <div class="middle-container">
+            <div class="time-date-box">
+                <div class="city-info">
+                    <h2 class="city-name">Athens</h2>
+                    <div class="current-time" id="current-time">09:03</div>
+                    <div class="current-date" id="current-date">Thursday, 31 Aug</div>
+                </div>
+            </div>
+
+            <div class="weather-box">
+                <div class="temp-info">
+                    <div class="current-temp" id="current-temp">24°C</div>
+                    <div class="feels-like" id="feels-like">Feels like: 22°C</div>
+                    <div class="sun-times">
+                        <div class="sunrise" id="sunrise">
+                            <img src="public/images/sunrise.png" alt="sunrise">
+                            Sunrise 06:37AM
+                        </div>
+                        <div class="sunset" id="sunset">
+                            <img src="public/images/sunset.png" alt="sunset">
+                            Sunset 20:37PM
+                        </div>
+                    </div>
+
+                    <div class="weather-icon">
+                        <div class=" icon">
+                            <!-- <img src="public/images/weather-icon.png" alt="Sunny" id="weather-icon"> -->
+                            <img id="weather-icon" />
+                            <h1 class=" weather-description">Sunny</h1>
+                        </div>
+                    </div>
+
+                    <div class="weather-metrics">
+                        <div class="metric">
+                            <img src="public/images/humidity.png" alt="Humidity">
+                            <div class="metric-value" id="humidity">41%</div>
+                            <div class="metric-label">Humidity</div>
+                        </div>
+                        <div class="metric">
+                            <img src="public/images/wind.png" alt="Wind">
+                            <div class="metric-value" id="wind">2km/h</div>
+                            <div class="metric-label">Wind Speed</div>
+                        </div>
+                        <div class="metric">
+                            <img src="public/images/pressure.png" alt="Pressure">
+                            <div class="metric-value" id="pressure">997hPa</div>
+                            <div class="metric-label">Pressure</div>
+                        </div>
+                        <div class="metric">
+                            <img src="public/images/uv-white.png" alt="UV">
+                            <div class="metric-value" id="uv">8</div>
+                            <div class="metric-label">UV</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-forcast-info">
+            <div class="day-forcast">
+                <div class="forcast-box-1">
+                    <h3 class="day-title">5 Days Forecast</h3>
+                    <div id="daily-forecast" class="forecast-list-1"></div>
+                </div>
+            </div>
+
+            <div class="hourly-forcast">
+                <div class="forcast-box-2">
+                    <h3 class="hourly-title">Hourly Forecast</h3>
+                    <div id="hourly-forecast" class="forecast-list-2"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
